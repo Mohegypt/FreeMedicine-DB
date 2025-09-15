@@ -1,1 +1,449 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أفضل حلول الاستضافة لمشروع الأدوية المجانية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c7da0;
+            --secondary-color: #a9d6e5;
+            --accent-color: #01497c;
+            --light-color: #e9f5f9;
+            --dark-color: #012a4a;
+            --success-color: #2a9d8f;
+            --warning-color: #e9c46a;
+            --danger-color: #e76f51;
+            --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 12px 24px;
+            background: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 30px;
+            margin: 0 10px 10px;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s;
+        }
+        
+        .tab-btn.active {
+            background: var(--accent-color);
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .hosting-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .hosting-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s;
+        }
+        
+        .hosting-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .price {
+            font-size: 2rem;
+            color: var(--dark-color);
+            text-align: center;
+            margin: 15px 0;
+        }
+        
+        .features {
+            list-style-type: none;
+            margin-bottom: 25px;
+        }
+        
+        .features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .features li i {
+            color: var(--success-color);
+            margin-left: 10px;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: var(--accent-color);
+        }
+        
+        .comparison {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 40px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: right;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background: var(--light-color);
+            color: var(--dark-color);
+        }
+        
+        .recommendation {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 40px;
+            border-right: 5px solid var(--success-color);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: var(--dark-color);
+            border-top: 1px solid #ddd;
+        }
+        
+        @media (max-width: 768px) {
+            .hosting-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tab-btn {
+                margin-bottom: 10px;
+                width: 80%;
+            }
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .badge-success {
+            background: var(--success-color);
+            color: white;
+        }
+        
+        .badge-warning {
+            background: var(--warning-color);
+            color: var(--dark-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-cloud"></i>
+            </div>
+            <h1>أفضل حلول الاستضافة لمشروع الأدوية المجانية</h1>
+            <p>اختر أفضل منصة لاستضافة قاعدة البيانات الخاصة بك بناءً على احتياجاتك وميزانيتك</p>
+        </header>
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('free')">حلول مجانية</button>
+            <button class="tab-btn" onclick="showTab('paid')">حلول مدفوعة</button>
+            <button class="tab-btn" onclick="showTab('comparison')">مقارنة</button>
+        </div>
+        
+        <div class="tab-content active" id="free">
+            <h2>خيارات الاستضافة المجانية</h2>
+            <p>هذه الخيارات مناسبة للمشاريع الصغيرة والمبادرات غير الربحية ذات الميزانية المحدودة.</p>
+            
+            <div class="hosting-options">
+                <div class="hosting-card">
+                    <div class="card-header">
+                        <h3>GitHub Pages</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="price">مجاني بالكامل</div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> نطاق مجاني (username.github.io)</li>
+                            <li><i class="fas fa-check"></i> استضافة ثابتة مناسبة للتطبيقات البسيطة</li>
+                            <li><i class="fas fa-check"></i> تكامل مع Git للإصدارات والنسخ الاحتياطي</li>
+                            <li><i class="fas fa-check"></i> SSL مجاني</li>
+                            <li><i class="fas fa-times"></i> لا يدعم قواعد البيانات الديناميكية</li>
+                        </ul>
+                        <a href="https://pages.github.com/" class="btn">الموقع الرسمي</a>
+                    </div>
+                </div>
+                
+                <div class="hosting-card">
+                    <div class="card-header">
+                        <h3>Netlify</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="price">مجاني مع خيارات مدفوعة</div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> نطاق مجاني (yoursite.netlify.app)</li>
+                            <li><i class="fas fa-check"></i> نشر مستمر من GitHub</li>
+                            <li><i class="fas fa-check"></i> نماذج ووظائف بدون خادم</li>
+                            <li><i class="fas fa-check"></i> SSL مجاني</li>
+                            <li><i class="fas fa-times"></i> محدودية في التعامل مع قواعد البيانات</li>
+                        </ul>
+                        <a href="https://www.netlify.com/" class="btn">الموقع الرسمي</a>
+                    </div>
+                </div>
+                
+                <div class="hosting-card">
+                    <div class="card-header">
+                        <h3>000WebHost</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="price">مجاني مع إعلانات</div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> استضافة مع PHP و MySQL</li>
+                            <li><i class="fas fa-check"></i> 300 MB مساحة تخزين</li>
+                            <li><i class="fas fa-check"></i> 3 GB نقل بيانات شهرياً</li>
+                            <li><i class="fas fa-check"></i> نطاق فرعي مجاني</li>
+                            <li><i class="fas fa-times"></i> إعلانات على الموقع</li>
+                        </ul>
+                        <a href="https://www.000webhost.com/" class="btn">الموقع الرسمي</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="paid">
+            <h2>خيارات الاستضافة المدفوعة</h2>
+            <p>هذه الخيارات توفر أداء أفضل وموثوقية أعلى مع دعم كامل لقواعد البيانات.</p>
+            
+            <div class="hosting-options">
+                <div class="hosting-card">
+                    <div class="card-header">
+                        <h3>SiteGround</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="price">بدءاً من $3.99/شهر</div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> أداء عالي وسرعة فائقة</li>
+                            <li><i class="fas fa-check"></i> دعم فني على مدار الساعة</li>
+                            <li><i class="fas fa-check"></i> نسخ احتياطي يومي</li>
+                            <li><i class="fas fa-check"></i> SSL مجاني</li>
+                            <li><i class="fas fa-check"></i> تركيب WordPress بنقرة واحدة</li>
+                        </ul>
+                        <a href="https://www.siteground.com/" class="btn">الموقع الرسمي</a>
+                    </div>
+                </div>
+                
+                <div class="hosting-card">
+                    <div class="card-header">
+                        <h3>Bluehost</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="price">بدءاً من $2.95/شهر</div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> نطاق مجاني لمدة سنة</li>
+                            <li><i class="fas fa-check"></i> SSL مجاني</li>
+                            <li><i class="fas fa-check"></i> مساحة تخزين غير محدودة</li>
+                            <li><i class="fas fa-check"></i> دعم فني 24/7</li>
+                            <li><i class="fas fa-check"></i> مناسب للمبتدئين</li>
+                        </ul>
+                        <a href="https://www.bluehost.com/" class="btn">الموقع الرسمي</a>
+                    </div>
+                </div>
+                
+                <div class="hosting-card">
+                    <div class="card-header">
+                        <h3>A2 Hosting</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="price">بدءاً من $2.99/شهر</div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> سرعة فائقة (Turbo Servers)</li>
+                            <li><i class="fas fa-check"></i> نقل بيانات غير محدود</li>
+                            <li><i class="fas fa-check"></i> دعم فني ممتاز</li>
+                            <li><i class="fas fa-check"></i> ضمان استرداد الأموال</li>
+                            <li><i class="fas fa-check"></i> بيئة آمنة ومستقرة</li>
+                        </ul>
+                        <a href="https://www.a2hosting.com/" class="btn">الموقع الرسمي</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="comparison">
+            <h2>مقارنة بين خيارات الاستضافة</h2>
+            
+            <div class="comparison">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الميزة</th>
+                            <th>الاستضافة المجانية</th>
+                            <th>الاستضافة المدفوعة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>التكلفة</td>
+                            <td>مجانية</td>
+                            <td>تبدأ من ~$3/شهر</td>
+                        </tr>
+                        <tr>
+                            <td>الأداء والسرعة</td>
+                            <td>منخفضة إلى متوسطة</td>
+                            <td>عالية إلى فائقة</td>
+                        </tr>
+                        <tr>
+                            <td>قاعدة البيانات</td>
+                            <td>محدودة أو غير متاحة</td>
+                            <td>كاملة مع دعم MySQL</td>
+                        </tr>
+                        <tr>
+                            <td>الدعم الفني</td>
+                            <td>محدود أو غير متاح</td>
+                            <td>متاح 24/7</td>
+                        </tr>
+                        <tr>
+                            <td>النطاق المجاني</td>
+                            <td>نطاق فرعي فقط</td>
+                            <td>نطاق خاص مجاني لمدة سنة</td>
+                        </tr>
+                        <tr>
+                            <td>النسخ الاحتياطي</td>
+                            <td>محدود أو غير متاح</td>
+                            <td>يومي تلقائي</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="recommendation">
+                <h3><i class="fas fa-lightbulb"></i> توصيتي لمشروعك</h3>
+                <p>لمشروع الأدوية المجانية، أنصحك بالبدء بـ <strong>Netlify</strong> إذا كنت تريد حلًا مجانيًا سريعًا وسهلاً، حيث يمكنك رفع موقعك مباشرة من GitHub.</p>
+                <p>إذا كان مشروعك سينمو ويحتاج لقاعدة بيانات حقيقية، فأنصحك بـ <strong>SiteGround</strong> أو <strong>Bluehost</strong> للحصول على أداء أفضل ودعم فني متكامل.</p>
+                <p>للحلول المجانية، تذكر أنك ستحتاج إلى استخدام خدمات خارجية لقاعدة البيانات مثل <strong>Firebase</strong> أو <strong>Supabase</strong>.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 دليل استضافة مواقع الويب - تم التطوير لمساعدة مبادرات الخير مثل مشروع الأدوية المجانية</p>
+            <p>للتواصل: info@example.com | هاتف: 966123456789+</p>
+        </footer>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // إخفاء جميع المحتويات
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // إلغاء تنشيط جميع الأزرار
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // إظهار المحتوى المحدد
+            document.getElementById(tabId).classList.add('active');
+            
+            // تنشيط الزر المحدد
+            document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
